@@ -16,7 +16,7 @@ export default function Books() {
     { id: 5, title: "It Ends With Us", author: "Jane Austen", imgSrc: "/booksImgs/ITENDswithus.webp",price: "$10.99",category:"romance" },
     { id: 6, title: "King Of Worth", author: "J.D. Salinger", imgSrc: "/booksImgs/KING_OF_WRATH.webp",price: "$33.99",category:"mystery" },
     { id: 7, title: "Picking Daisies On Sundays", author: "J.D. Salinger", imgSrc: "/booksImgs/pickigdaisiesonsundays.webp",price: "$10.99",category:"historical" },
-    { id: 8, title: "The Seven Husbands Of Evelyn Hugo", author: "J.D. Salinger", imgSrc: "/booksImgs/SEVEN_HUSBANDS_OF_EVELYN_HUGO.webp",price: "$10.99",category:"mystery" },
+    { id: 8, title: "The Seven Husbands", author: "J.D. Salinger", imgSrc: "/booksImgs/SEVEN_HUSBANDS_OF_EVELYN_HUGO.webp",price: "$10.99",category:"mystery" },
     { id: 9, title: "Twisted Series", author: "J.D. Salinger", imgSrc: "/booksImgs/WhatsApp_Image_2024-10-30_at_12.21.47_PM.webp",price: "$70.99",category:"fantasy" },
   ]
 
@@ -60,20 +60,20 @@ useEffect(() => {
       )}
 
      <div
-      className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
+      className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
      >
        {(selectedBooks.filter(book =>
         book.title.toLowerCase().includes(search.toLowerCase()) ||
         book.author.toLowerCase().includes(search.toLowerCase())
       )).map((book) => (
-        <div key={book.id} className=' bookCard bg-white rounded-lg shadow-lg p-4 w-48 flex flex-col items-center hover:scale-105 transform transition-transform duration-300 hover:shadow-2xl hover:cursor-pointer'>
-          <img src={book.imgSrc} alt={book.title} className='w-32 h-48 object-cover mb-4' />
+        <div key={book.id} className=' bookCard bg-white rounded-lg shadow-lg p-4 w-40 flex flex-col items-center hover:scale-105 transform transition-transform duration-300 hover:shadow-2xl hover:cursor-pointer'>
+          <img src={book.imgSrc} alt={book.title} className='w-full h-auto object-cover mb-4' />
           <h2 className='text-base font-semibold mb-2 h-14'>{book.title}</h2>
           <p className='text-gray-600'>{book.author}</p>
           <p className='text-sm text-gray-500 mt-1'>{book.category}</p>
           <p className='text-gray-800 font-bold mt-2'>{book.price}</p>
           <button
-            className='mt-auto'
+            className='mt-auto w-40!'
             onClick={() => handlePurchase(book)}
           >
             <span className='mt-4 w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300'>
