@@ -9,15 +9,15 @@ export default function Books() {
   const [search, setSearch] = useState("");
 
   const books = [
-    { id: 1, title: "BURN AFTER WRITING", author: "F. Scott Fitzgerald", imgSrc: "../booksImgs/BURNAFTERWRITING.webp",price: "$10.99",category:"romance" },
-    { id: 2, title: "Getting over you", author: "F. Scott Fitzgerald", imgSrc: "../booksImgs/GEttingoveryou.webp",price: "$18.99",category:"fantasy" },
-    { id: 3, title: "Haunting Adeline", author: "Harper Lee", imgSrc: "../booksImgs/HAUNTING_ADELINE.webp",price: "$10.99",category:"historical" },
-    { id: 4, title: "It Starts With Us", author: "George Orwell", imgSrc: "../booksImgs/IT_STARTS_WITH_US.webp",price: "$22.99",category:"romance" },
-    { id: 5, title: "It Ends With Us", author: "Jane Austen", imgSrc: "../booksImgs/ITENDswithus.webp",price: "$10.99",category:"romance" },
-    { id: 6, title: "King Of Worth", author: "J.D. Salinger", imgSrc: "../booksImgs/KING_OF_WRATH.webp",price: "$33.99",category:"mystery" },
-    { id: 7, title: "Picking Daisies On Sundays", author: "J.D. Salinger", imgSrc: "../booksImgs/pickigdaisiesonsundays.webp",price: "$10.99",category:"historical" },
-    { id: 8, title: "The Seven Husbands Of Evelyn Hugo", author: "J.D. Salinger", imgSrc: "../booksImgs/SEVEN_HUSBANDS_OF_EVELYN_HUGO.webp",price: "$10.99",category:"mystery" },
-    { id: 9, title: "Twisted Series", author: "J.D. Salinger", imgSrc: "../booksImgs/WhatsApp_Image_2024-10-30_at_12.21.47_PM.webp",price: "$70.99",category:"fantasy" },
+    { id: 1, title: "BURN AFTER WRITING", author: "F. Scott Fitzgerald", imgSrc: "/booksImgs/BURNAFTERWRITING.webp",price: "$10.99",category:"romance" },
+    { id: 2, title: "Getting over you", author: "F. Scott Fitzgerald", imgSrc: "/booksImgs/GEttingoveryou.webp",price: "$18.99",category:"fantasy" },
+    { id: 3, title: "Haunting Adeline", author: "Harper Lee", imgSrc: "/booksImgs/HAUNTING_ADELINE.webp",price: "$10.99",category:"historical" },
+    { id: 4, title: "It Starts With Us", author: "George Orwell", imgSrc: "/booksImgs/IT_STARTS_WITH_US.webp",price: "$22.99",category:"romance" },
+    { id: 5, title: "It Ends With Us", author: "Jane Austen", imgSrc: "/booksImgs/ITENDswithus.webp",price: "$10.99",category:"romance" },
+    { id: 6, title: "King Of Worth", author: "J.D. Salinger", imgSrc: "/booksImgs/KING_OF_WRATH.webp",price: "$33.99",category:"mystery" },
+    { id: 7, title: "Picking Daisies On Sundays", author: "J.D. Salinger", imgSrc: "/booksImgs/pickigdaisiesonsundays.webp",price: "$10.99",category:"historical" },
+    { id: 8, title: "The Seven Husbands Of Evelyn Hugo", author: "J.D. Salinger", imgSrc: "/booksImgs/SEVEN_HUSBANDS_OF_EVELYN_HUGO.webp",price: "$10.99",category:"mystery" },
+    { id: 9, title: "Twisted Series", author: "J.D. Salinger", imgSrc: "/booksImgs/WhatsApp_Image_2024-10-30_at_12.21.47_PM.webp",price: "$70.99",category:"fantasy" },
   ]
 
 useEffect(() => {

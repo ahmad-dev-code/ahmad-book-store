@@ -15,7 +15,7 @@ export default function Home() {
         </p>
         <div className="mt-8 flex justify-center">
           <img
-            src="../booksImgs/laptop_1.webp"
+            src="/booksImgs/laptop_1.webp"
             alt="Welcome"
             className="w-full sm:w-3/4 md:w-2/3 mx-auto h-auto object-cover rounded-xl shadow-xl transition-transform duration-300 hover:scale-105"
           />
@@ -31,7 +31,7 @@ export default function Home() {
             <Link
               to={"/books/" + category.toLowerCase()}
               key={index}
-              className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-2xl hover:cursor-pointer transform hover:scale-110 transition-transform duration-300 font-medium text-lg"
+              className="bg-linear-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-2xl hover:cursor-pointer transform hover:scale-110 transition-transform duration-300 font-medium text-lg"
             >
               {category}
             </Link>
