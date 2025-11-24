@@ -32,11 +32,10 @@ useEffect(() => {
   }, [category]);
 
   const handlePurchase = (e) => {
-    alert(`Book added to cart!${e.title}`);
-
+    alert(`You have added "${e.title}" to your cart! and its price is ${e.price}`);
   }
 
- 
+
     
   
 
@@ -73,7 +72,7 @@ useEffect(() => {
           <p className='text-sm text-gray-500 mt-1'>{book.category}</p>
           <p className='text-gray-800 font-bold mt-2'>{book.price}</p>
           <button
-            className='mt-auto w-40!'
+            className='mt-auto w-40! hover:outline-0!'
             onClick={() => handlePurchase(book)}
           >
             <span className='mt-4 w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300'>
