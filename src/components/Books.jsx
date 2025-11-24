@@ -31,8 +31,17 @@ useEffect(() => {
     }
   }, [category]);
 
-  const handlePurchase = (e) => {
-    alert(`You have added "${e.title}" to your cart! and its price is ${e.price}`);
+  const handlePurchase = (book) => {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    // Check if book already in cart to increment quantity
+    const existingIndex = cart.findIndex(item => item.id === book.id);
+    if (existingIndex >= 0) {
+      cart[existingIndex].quantity = (cart[existingIndex].quantity || 1) + 1;
+    } else {
+      cart.push({ ...book, quantity: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`You have added "${book.title}" to your cart!`);
   }
 
 

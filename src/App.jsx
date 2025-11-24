@@ -6,10 +6,12 @@ import Contact from './components/Contact'
 import Books from './components/Books'
 import Home from './components/Home';
 import Footer from './components/Footer';
+import ShoppingCart from './components/ShoppingCart';
 
 
 
 function App() {
+
 
 
   return (
@@ -20,6 +22,7 @@ function App() {
           <Route path='/about' element={<About/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/books/:category?' element={<Books/>}/>
+          <Route path='/shopping-cart' element={<ShoppingCart/>}/>
         </Routes>
         <Footer/>
 
