@@ -195,7 +195,7 @@ ahmad-book-store/
 ![Books Grid](/client/public/screenshots/3.jpeg)
 
 ### Contact Page
-![Contact Page](/client/public/screenshots/4.jpeg)
+![Contact Page](./client/public/screenshots/4.jpeg)
 
 ### Shopping Cart
 ![Shopping Cart](/client/public/screenshots/5.jpeg)
