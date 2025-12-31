@@ -104,8 +104,16 @@ ahmad-book-store/
    ```bash
    cd back
    npm install
-   # Update .env with your database credentials
+   
+   # Set up MySQL database
+   # Create a database named 'bookstore'
+   # Update .env file with your MySQL credentials
+   
+   # Run the server
    npm start
+   
+   # For development with auto-restart
+   npm run dev
    ```
 
 3. **Setup Frontend** (in new terminal)
@@ -174,6 +182,23 @@ ahmad-book-store/
 2. Manage books (add/edit/delete)
 3. View all customer orders
 4. Monitor store performance
+
+## 📸 Screenshots
+
+### Home Screen
+![Home Screen](/client/public/screenshots/1.jpeg)
+
+### About Page
+![About Page](/client/public/screenshots/2.jpeg)
+
+### Books Grid
+![Books Grid](/client/public/screenshots/3.jpeg)
+
+### Contact Page
+![Contact Page](/client/public/screenshots/4.jpeg)
+
+### Shopping Cart
+![Shopping Cart](/client/public/screenshots/5.jpeg)
 
 ## 🤝 Contributing
 
