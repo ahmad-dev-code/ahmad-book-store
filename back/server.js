@@ -5,13 +5,12 @@ const db = require('./db');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Temporary: Allow all origins for testing
+// CORS configuration
 app.use(cors({
-    origin: true, // Allow all origins
+    origin: 'https://transcendent-klepon-55987f.netlify.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-    credentials: true,
-    optionsSuccessStatus: 200
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
 }));
 app.use(express.json());
 
