@@ -33,7 +33,7 @@ export default function Admin() {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch('http://localhost:3306/api/orders');
+      const response = await fetch('http://localhost:5000/api/orders');
       const data = await response.json();
       setOrders(data);
     } catch (error) {
@@ -43,7 +43,7 @@ export default function Admin() {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch('http://localhost:3306/api/books');
+      const response = await fetch('http://localhost:5000/api/books');
       const data = await response.json();
       setBooks(data);
     } catch (error) {
@@ -75,7 +75,7 @@ export default function Admin() {
     if (!window.confirm('Are you sure you want to delete this book?')) return;
 
     try {
-      const response = await fetch(`http://localhost:3306/api/books/${bookId}`, {
+      const response = await fetch(`http://localhost:5000/api/books/${bookId}`, {
         method: 'DELETE',
       });
 
@@ -109,8 +109,8 @@ export default function Admin() {
 
     try {
       const url = editingBook 
-        ? `http://localhost:3306/api/books/${editingBook.id}`
-        : 'http://localhost:3306/api/books';
+        ? `http://localhost:5000/api/books/${editingBook.id}`
+        : 'http://localhost:5000/api/books';
       const method = editingBook ? 'PUT' : 'POST';
 
       const response = await fetch(url, {
