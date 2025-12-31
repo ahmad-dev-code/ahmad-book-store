@@ -123,6 +123,14 @@ ahmad-book-store/
    npm run dev
    ```
 
+   **For Local Development Only:** If you're running the backend locally, update the API URL in `client/src/api.js`:
+   ```javascript
+   // Change this line:
+   const API_BASE_URL = "https://ahmad-book-store-production.up.railway.app";
+   // To:
+   const API_BASE_URL = "http://localhost:5000";
+   ```
+
 4. **Access the application**
    - Frontend: http://localhost:5173
    - Backend: http://localhost:5000
