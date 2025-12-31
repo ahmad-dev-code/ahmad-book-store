@@ -4,14 +4,9 @@ require('dotenv').config();
 let pool;
 
 if (process.env.DATABASE_URL) {
-  // For Railway deployment - parse DATABASE_URL for pool config
-  const dbUrl = new URL(process.env.DATABASE_URL);
+  // For Railway deployment - use DATABASE_URL directly
   pool = mysql.createPool({
-    host: dbUrl.hostname,
-    user: dbUrl.username,
-    password: dbUrl.password,
-    database: dbUrl.pathname.substring(1), // Remove leading slash
-    port: dbUrl.port,
+    uri: process.env.DATABASE_URL,
     connectionLimit: 10,
     acquireTimeout: 60000,
     timeout: 60000,
@@ -39,4 +34,7 @@ pool.getConnection((err, connection) => {
   connection.release(); // Release the connection back to pool
 });
 
-module.exports = pool;
+// Use promise-based queries for better error handling
+const db = pool.promise();
+
+module.exports = db;
