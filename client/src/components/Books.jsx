@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import API_BASE_URL from '../api';
 
 export default function Books() {
   const { category } = useParams();
@@ -11,7 +12,7 @@ export default function Books() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/books')
+    fetch(`${API_BASE_URL}/api/books`)
       .then(response => response.json())
       .then(data => {
         setBooks(data);

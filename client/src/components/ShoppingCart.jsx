@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import API_BASE_URL from '../api';
 
 export default function ShoppingCart() {
     const [cart, setCart] = useState([]);
@@ -33,7 +34,7 @@ export default function ShoppingCart() {
 
         setIsCheckingOut(true);
         try {
-            const response = await fetch('http://localhost:5000/api/orders', {
+            const response = await fetch(`${API_BASE_URL}/api/orders`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

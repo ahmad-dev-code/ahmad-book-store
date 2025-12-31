@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import API_BASE_URL from '../api';
 
 export default function Admin() {
   const [activeTab, setActiveTab] = useState('orders');
@@ -33,7 +34,7 @@ export default function Admin() {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/orders');
+      const response = await fetch(`${API_BASE_URL}/api/orders`);
       const data = await response.json();
       setOrders(data);
     } catch (error) {
@@ -43,7 +44,7 @@ export default function Admin() {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/books');
+      const response = await fetch(`${API_BASE_URL}/api/books`);
       const data = await response.json();
       setBooks(data);
     } catch (error) {
@@ -75,7 +76,7 @@ export default function Admin() {
     if (!window.confirm('Are you sure you want to delete this book?')) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/books/${bookId}`, {
+      const response = await fetch(`${API_BASE_URL}/api/books/${bookId}`, {
         method: 'DELETE',
       });
 
@@ -109,8 +110,8 @@ export default function Admin() {
 
     try {
       const url = editingBook 
-        ? `http://localhost:5000/api/books/${editingBook.id}`
-        : 'http://localhost:5000/api/books';
+        ? `${API_BASE_URL}/api/books/${editingBook.id}`
+        : `${API_BASE_URL}/api/books`;
       const method = editingBook ? 'PUT' : 'POST';
 
       const response = await fetch(url, {
