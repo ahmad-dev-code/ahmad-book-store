@@ -186,19 +186,19 @@ ahmad-book-store/
 ## 📸 Screenshots
 
 ### Home Screen
-![Home Screen](/client/public/screenshots/1.jpeg)
+![Home Screen](client/public/screenshots/1.jpeg)
 
 ### About Page
-![About Page](/client/public/screenshots/2.jpeg)
+![About Page](client/public/screenshots/2.jpeg)
 
 ### Books Grid
-![Books Grid](/client/public/screenshots/3.jpeg)
+![Books Grid](client/public/screenshots/3.jpeg)
 
 ### Contact Page
-![Contact Page](/client/public/screenshots/4.jpeg)
+![Contact Page](client/public/screenshots/4.jpeg)
 
 ### Shopping Cart
-![Shopping Cart](/client/public/screenshots/5.jpeg)
+![Shopping Cart](client/public/screenshots/5.jpeg)
 
 ## 🤝 Contributing
 
