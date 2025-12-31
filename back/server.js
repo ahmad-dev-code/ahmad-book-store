@@ -5,7 +5,7 @@ const db = require('./db');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors('https://transcendent-klepon-55987f.netlify.app'));
 app.use(express.json());
 
 // Login
